@@ -16,3 +16,15 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::resource('Barang', 'BarangController');
+Route::resource('Pengadaan', 'PengadaanController');
+  Route::get('Pengadaan/{Pengadaan}/TambahBarang', 'DetailTransaksi@tambahBarangPengadaan');
+  Route::post('Pengadaan/{Pengadaan}/StoreBarang', 'DetailTransaksi@storeBarangPengadaan');
+  Route::get('Pengadaan/{Pengadaan}/EditBarang/{Detail}', 'DetailTransaksi@editBarangPengadaan');
+  Route::get('Pengadaan/{Pengadaan}/HapusBarang/{Detail}', 'DetailTransaksi@hapusBarangPengadaan');
+Route::resource('Pengeluaran', 'PengeluaranController');
+  Route::get('Pengeluaran/{Pengadaan}/TambahBarang', 'DetailTransaksi@tambahBarangPengeluaran');
+  Route::post('Pengeluaran/{Pengeluaran}/StoreBarang', 'DetailTransaksi@storeBarangPengeluaran');
+  Route::get('Pengeluaran/{Pengeluaran}/EditBarang/{Detail}', 'DetailTransaksi@editBarangPengeluaran');
+  Route::get('Pengeluaran/{Pengeluaran}/HapusBarang/{Detail}', 'DetailTransaksi@hapusBarangPengeluaran');
