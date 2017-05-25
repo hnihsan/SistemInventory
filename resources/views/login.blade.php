@@ -76,7 +76,8 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 <body>
   <div class="login">
  <h1>Login</h1>
-    <form method="post">
+ <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
+     {{ csrf_field() }}
      <input type="text" name="u" placeholder="Username" required="required" />
         <input type="password" name="p" placeholder="Password" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
