@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class BarangController extends Controller
 {
     public function index(){
-
+      return view('Barang.index')->with('title','Barang')->with('sideBarang', 'active');
     }
 
     public function store(Request $req){
@@ -15,7 +15,7 @@ class BarangController extends Controller
     }
 
     public function create(){
-
+      return view('Barang.tambah')->with('title','Barang')->with('sideBarang', 'active');
     }
 
     public function show($Barang){
@@ -26,12 +26,12 @@ class BarangController extends Controller
 
     }
 
-    public function update($Barang){
+    public function update(){
 
     }
 
     public function destroy($Barang){
-      
+
     }
 
 
